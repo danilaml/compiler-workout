@@ -22,5 +22,5 @@ script:
      - echo '#endif' >> test.cpp
      - echo 'int main() { printf("res - %d, %d, %d\n", __cpp_static_assert, FS, VR); return 0; }' >> test.cpp
      - clang --version
-     - clang test.cpp -O3 -std=c++11 -o test.o || clang test.cpp -O3 -o test.o
+     - clang test.cpp -O3 -std=c++17 -o test.o || clang test.cpp -O3 -std=c++1z || clang test.cpp -O3 -o test.o
      - ./test.o
