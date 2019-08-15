@@ -10,7 +10,7 @@ osx_image:
   - xcode6.4
 script:
      - echo "#include <stdio.h>" > test.cpp
-     - echo 'int main() { printf("res - %d\n", __cpp_static_assert); return 0; }' >> test.cpp
+     - echo 'int main() { printf("res - %d, %d, %d\n", __cpp_static_assert, __has_include(<filesystem>), __has_include(<variant>)); return 0; }' >> test.cpp
      - clang --version
      - clang test.cpp -O3 -std=c++11 -o test.o || clang test.cpp -O3 -o test.o
      - ./test.o
