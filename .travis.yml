@@ -5,5 +5,5 @@ os:
 script:
      - echo "int main() { return __cpp_static_assert; }" > test.c
      - clang --version
-     - clang test.c -O3 -o test.o
+     - clang test.c -O3 -std=c++11 -o test.o
      - test.o
