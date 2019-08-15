@@ -6,7 +6,8 @@ osx_image:
   - xcode11
   - xcode10
 script:
-     - echo -e "#include <stdio.h>\nint main() { printf("%d", __cpp_static_assert); return 0; }" > test.cpp
+     - echo '#include <stdio.h>
+     int main() { printf("%d", __cpp_static_assert); return 0; }' > test.cpp
      - clang --version
      - clang test.cpp -O3 -std=c++11 -o test.o || clang test.cpp -O3 -o test.o
      - ls && ./test.o
