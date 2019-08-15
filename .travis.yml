@@ -1,6 +1,9 @@
 language: c
-os: osx
+os:
+  - linux
+  - osx
 script:
      - echo "int main() { return __cpp_static_assert; }" > test.c
+     - clang --version
      - clang test.c -O3 -o test.o
      - test.o
