@@ -5,6 +5,8 @@ os:
 osx_image:
   - xcode11
   - xcode10
+  - xcode9
+  - xcode8
 script:
      - echo '#include <stdio.h>
      int main() { printf("%d", __cpp_static_assert); return 0; }' > test.cpp
