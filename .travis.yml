@@ -2,8 +2,11 @@ language: c
 os:
   - linux
   - osx
+osx_image:
+  - xcode11
+  - xcode10
 script:
      - echo "int main() { return __cpp_static_assert; }" > test.cpp
      - clang --version
      - clang test.cpp -O3 -std=c++11 -o test.o || clang test.cpp -O3 -o test.o
-     - test.o
+     - ls && ./test.o
