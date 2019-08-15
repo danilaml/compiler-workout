@@ -11,12 +11,12 @@ osx_image:
 script:
      - echo "#include <stdio.h>" > test.cpp
      - echo '#if __has_include(<filesystem>)'  >> test.cpp
-     - echo '#define FS 1" >> test.cpp
+     - echo '#define FS 1' >> test.cpp
      - echo '#else' >> test.cpp
      - echo '#define FS 0' >> test.cpp
      - echo '#endif' >> test.cpp
      - echo '#if __has_include(<variant>)'  >> test.cpp
-     - echo '#define VR 1" >> test.cpp
+     - echo '#define VR 1' >> test.cpp
      - echo '#else' >> test.cpp
      - echo '#define VR 0' >> test.cpp
      - echo '#endif' >> test.cpp
